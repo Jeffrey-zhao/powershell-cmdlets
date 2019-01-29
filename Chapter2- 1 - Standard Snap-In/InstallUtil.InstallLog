@@ -1,0 +1,72 @@
+﻿
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+An exception occurred during the Install phase.
+System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Microsoft\PowerShell\1\PowerShellSnapIns\Wiley.PSProfessional.Chapter2' is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+An exception occurred during the Install phase.
+System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Microsoft\PowerShell\1\PowerShellSnapIns\Wiley.PSProfessional.Chapter2' is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+An exception occurred during the Install phase.
+System.UnauthorizedAccessException: Access to the registry key 'HKEY_LOCAL_MACHINE\Software\Microsoft\PowerShell\1\PowerShellSnapIns\Wiley.PSProfessional.Chapter2' is denied.
+
+The Rollback phase of the installation is beginning.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The Rollback phase completed successfully.
+
+The transacted install has completed.
+
+Running a transacted installation.
+
+Beginning the Install phase of the installation.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The Install phase completed successfully, and the Commit phase is beginning.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The Commit phase completed successfully.
+
+The transacted install has completed.
+
+
+The uninstall is beginning.
+See the contents of the log file for the D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.dll assembly's progress.
+The file is located at D:\WindowsPowerShell\ProfessionalPowerShell1\Chapter2- 1 - Standard Snap-In\bin\Debug\Chapter2.InstallLog.
+
+The uninstall has completed.

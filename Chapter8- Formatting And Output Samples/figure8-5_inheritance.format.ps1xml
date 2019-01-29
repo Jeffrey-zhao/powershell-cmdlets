@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+		<!-- Table view for base class Employee. This means that all derived classes from Employee 
+			  will use this view when object is being displayed in table format. Since this view is at 
+			  top of config file, default view will be table. -->
+		<View>
+			<Name>Employee</Name>
+			<ViewSelectedBy>
+				<TypeName>CustomFormatting.Employee</TypeName>
+			</ViewSelectedBy>
+			<TableControl>
+				<TableHeaders>
+					<TableColumnHeader>
+						<Label>Name</Label>
+						<Width>25</Width>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label>Role</Label>
+						<Width>10</Width>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label>Level</Label>
+						<Alignment>center</Alignment>
+					</TableColumnHeader>
+				</TableHeaders>
+				<TableRowEntries>
+					<TableRowEntry>
+						<TableColumnItems>
+							<TableColumnItem>
+								<PropertyName>Name</PropertyName>
+							</TableColumnItem>
+							<TableColumnItem>
+								<PropertyName>Role</PropertyName>
+							</TableColumnItem>
+							<TableColumnItem>
+								<PropertyName>Level</PropertyName>
+							</TableColumnItem>
+						</TableColumnItems>
+					</TableRowEntry>
+				</TableRowEntries>
+			</TableControl>
+		</View>
+
+		<!-- Separate table view for Manager objects. This works when the objects being displayed 
+			  are all of type Manager. When they are mixed, the first object from the pipeline determines
+			  the table view to use for the rest of them. -->
+		<View>
+			<Name>Manager</Name>
+			<ViewSelectedBy>
+				<TypeName>CustomFormatting.Manager</TypeName>
+			</ViewSelectedBy>
+			<TableControl>
+				<TableHeaders>
+					<TableColumnHeader>
+						<Label>Name</Label>
+						<Width>25</Width>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label>Role</Label>
+						<Width>10</Width>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label>Level</Label>
+						<Alignment>center</Alignment>
+					</TableColumnHeader>
+					<TableColumnHeader>
+						<Label># Reports</Label>						
+					</TableColumnHeader>
+				</TableHeaders>
+				<TableRowEntries>
+					<TableRowEntry>
+						<TableColumnItems>
+							<TableColumnItem>
+								<PropertyName>Name</PropertyName>
+							</TableColumnItem>
+							<TableColumnItem>
+								<PropertyName>Role</PropertyName>
+							</TableColumnItem>
+							<TableColumnItem>
+								<PropertyName>Level</PropertyName>
+							</TableColumnItem>
+							<TableColumnItem>
+								<ScriptBlock>$_.DirectReports.Count</ScriptBlock>
+							</TableColumnItem>
+						</TableColumnItems>
+					</TableRowEntry>
+				</TableRowEntries>
+			</TableControl>
+		</View>
+		
+		
+		<!-- List view definition that shows how to create separate ListEntry nodes based on object type
+			  to display objects differently. In this case we have a separate ListEntry for Manager
+			 objects so that we can display the addition DirectReports property -->
+		<View>
+			<Name>Employee</Name>
+			<ViewSelectedBy>
+				<TypeName>CustomFormatting.Employee</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<EntrySelectedBy>
+							<TypeName>CustomFormatting.Manager</TypeName>
+						</EntrySelectedBy>
+						<ListItems>
+							<ListItem>
+								<PropertyName>Name</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Role</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Level</PropertyName>
+							</ListItem>
+							<ListItem>		
+								<PropertyName>DirectReports</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<PropertyName>Name</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Role</PropertyName>
+							</ListItem>
+							<ListItem>
+								<PropertyName>Level</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+
+		<!-- This wide view displays just the name for all employee derived classes. But there is an 
+			  additional WideEntry that is selected for Manager types only that encloses the name in
+			  brackets. This makes it easier for managers to identify themselves :) -->
+		<View>
+			<Name>Employee</Name>
+			<ViewSelectedBy>
+				<TypeName>CustomFormatting.Employee</TypeName>
+			</ViewSelectedBy>
+			<WideControl>
+				<WideEntries>
+					<WideEntry>
+						<EntrySelectedBy>
+							<TypeName>CustomFormatting.Manager</TypeName>
+						</EntrySelectedBy>
+						<WideItem>
+							<PropertyName>Name</PropertyName>
+							<FormatString>[{0}]</FormatString>
+						</WideItem>
+					</WideEntry>
+					<WideEntry>						
+						<WideItem>
+							<PropertyName>Name</PropertyName>
+						</WideItem>
+					</WideEntry>
+				</WideEntries>
+			</WideControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>

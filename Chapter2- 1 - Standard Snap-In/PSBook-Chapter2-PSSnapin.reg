@@ -1,0 +1,10 @@
+﻿Windows Registry Editor Version 5.0.0
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\PowerShellSnapIns\Wiley.PSProfessional.Chapter2]
+"PowerShellVersion"="1.0"
+"Vendor"="Wiley"
+"Description"="This is a sample Powershell snap-in"
+"Version"="0.0.0.0"
+"ApplicationBase"="D:\\WindowsPowerShell\\ProfessionalPowerShell1\\Chapter2- 1 - Standard Snap-In"
+"AssemblyName"="Chapter2, Version=0.0.0.0, Culture=neutral,PublicKeyToken=null"
+"ModuleName"="D:\\WindowsPowerShell\\ProfessionalPowerShell1\\Chapter2- 1 - Standard Snap-In\\bin\\Debug\\Chapter2.dll"

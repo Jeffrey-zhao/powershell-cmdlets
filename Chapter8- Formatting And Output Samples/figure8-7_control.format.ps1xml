@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<!-- ################ GLOBAL CONTROL DEFINITIONS ################ -->
+	<Controls>
+		<Control>
+			<Name>FileSystemTypes-GroupingFormat</Name>
+			<CustomControl>
+				<CustomEntries>
+					<CustomEntry>
+						<CustomItem>
+							<Frame>
+								<LeftIndent>4</LeftIndent>
+								<CustomItem>
+									<Text AssemblyName="System.Management.Automation" BaseName="FileSystemProviderStrings" ResourceId="DirectoryDisplayGrouping"/>
+									<ExpressionBinding>
+										<ScriptBlock>$_.PSParentPath</ScriptBlock>
+									</ExpressionBinding>
+									<NewLine/>
+								</CustomItem>
+							</Frame>
+						</CustomItem>
+					</CustomEntry>
+				</CustomEntries>
+			</CustomControl>
+		</Control>
+	</Controls>
+	<ViewDefinitions>
+		<View>
+			<Name>MyProcessView</Name>
+			<ViewSelectedBy>
+				<TypeName>System.Diagnostics.Process</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<Label>Name:ID</Label>
+								<ScriptBlock>$_.ProcessName + ":" + $_.Id</ScriptBlock>
+							</ListItem>
+							<ListItem>
+								<!-- this label is unnecessary since it matches propertyname -->
+								<Label>Threads</Label>
+								<PropertyName>Threads</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+	</ViewDefinitions>
+	
+</Configuration>

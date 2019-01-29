@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+	<ViewDefinitions>
+		<View>
+			<Name>MyProcessView</Name>
+			<ViewSelectedBy>
+				<TypeName>System.Diagnostics.Process</TypeName>
+			</ViewSelectedBy>
+			<ListControl>
+				<ListEntries>
+					<ListEntry>
+						<ListItems>
+							<ListItem>
+								<Label>Name:ID</Label>								
+								<ScriptBlock>$_.ProcessName + ":" + $_.Id</ScriptBlock>								
+							</ListItem>
+							<ListItem>
+								<!-- this label is unnecessary since it matches propertyname -->
+								<Label>Threads</Label>
+								<PropertyName>Threads</PropertyName>
+							</ListItem>
+						</ListItems>
+					</ListEntry>
+				</ListEntries>
+			</ListControl>
+		</View>
+	</ViewDefinitions>
+</Configuration>
